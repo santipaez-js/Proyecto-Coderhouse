@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body {
+    margin: 0%;
+    background-image: url(./img/topo-background.jpg);;
+    font-family: Arial, sans-serif;
+}
+
+/* Header o encabezado */
+
+.encabezado {
+    background-color: rgb(232, 7, 7);
+    color: black;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.encabezado img {
+    justify-self: center;
+}
+
+.nombre a {
+    color: white;
+    text-decoration: none;
+    font-size: 60px;
+    width: auto;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    grid-column: 2;
+}
+
+.menu {
+    grid-column: 3;
+    float: right;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main */
+
+.main-index {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.contenedor, .contenedor-2, .contenedor-3 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    gap: 10px;
+}
+
+.contenedor img, .contenedor-2 img {
+    width: auto;
+    align-self: center;
+}
+
+.contenedor div, .contenedor-2 div {
+    margin-left: 10px;
+}
+
+.contenedor-3 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Pie de pagina */
+
+.pie-pagina {
+    background-color: rgb(232, 7, 7);
+    color: white;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+    height: auto;
+}
+
+.icono-footer {
+    grid-row: 1;
+}
+
+.logos {
+    grid-row: 2;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: auto;
+}
+
+.facebook {
+    grid-column: 1;
+    align-content: center;
+}
+
+.twitter {
+    grid-column: 2;
+    align-content: center;
+}
+
+.instagram {
+    grid-column: 3;
+    align-content: center;
+}
+
+.tiktok {
+    grid-column: 4;
+    align-content: center;
+}
+
+.logos img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.derechos {
+    grid-row: 3;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* CONTACTOS */
+
+.contenedor-contactos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 10px auto;
+    padding: 30px;
+    width: 28%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.contenedor-contactos label {
+    text-align: right;
+    padding-right: 10px;
+    font-weight: bold;
+    align-self: center;
+}
+
+.contenedor-contactos input, 
+.contenedor-contactos select, 
+.contenedor-contactos textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.contenedor-contactos textarea {
+    width: 200px;
+    height: 190px;
+}
+
+.contenedor-contactos .full-width {
+    grid-column: span 2;
+}
+
+.contenedor-contactos button {
+    grid-column: span 2;
+    padding: 10px;
+    background-color: rgb(232, 7, 7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-contactos button:hover {
+    background-color: rgb(226, 91, 91);
+}
+
+/* Media Queries para telefonos */
+
+
+@media (max-width: 767px) {
+    .encabezado {
+        text-align: center;
+    }
+
+    .nombre a {
+        font-size: 40px;
+    }
+
+    .menu {
+        float: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    .menu li {
+        display: block;
+        margin: 5px 0;
+        margin-top: 15px;
+        font-size: 20px;
+        border: solid black 2px;
+        border-radius: 10px;
+    }
+
+    .main-index {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor, .contenedor-2, .contenedor-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-contactos {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1565px) {
+
+    .menu li {
+        display: block;
+        margin: 5px 0;
+        margin-top: 15px;
+        border: solid black 2px;
+        border-radius: 10px;
+    }
+
+}
